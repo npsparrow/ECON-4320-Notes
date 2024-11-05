@@ -1,0 +1,116 @@
+\documentclass[letterpaper, 12pt]{article}
+\usepackage{hyperref}
+\usepackage{graphicx}
+
+\title{Content}
+\author{Nikhil Panickssery}
+\date{\today}
+
+\include{include/latex-defaults.tex}
+\include{include/latex-math.tex}
+
+%\graphicspath{ { figs/ } }     
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+\label{sec:introduction}
+
+This course is designed to:
+
+\begin{enumerate}
+\item familiarize you with \emph{what} models of decision making exist in
+  economics, and
+\item develop skills in \emph{how} to model decision making.
+\end{enumerate}
+
+\section{Models}
+\label{sec:models}
+
+The following is the list of models we will analyze for the course:
+
+\begin{enumerate}
+\item k
+\end{enumerate}
+
+\section{Uncertainty}
+\label{sec:uncertainty}
+
+Most decisions we face on a day-to-day basis involve some degree of
+uncertainty. Whether that comes in which stock to invest in, what movie to
+watch, or what job to accept, the actual probability of each outcome is not
+known. Consider: when we discuss risk, everyone agrees on the probabilities;
+when discussing uncertainty, there is disagreement. That is, when analyzing
+someone's actions, we cannot make any statements \emph{a priori} regarding their
+beliefs.
+
+\subsection{Resnick}
+\label{subsec:resnick}
+
+\subsection{Savage and SEU}
+\label{subsec:savage}
+
+\subsection{Ellsberg}
+\label{subsec:ellsberg}
+
+SEU cannot account for ambiguity aversion... so we will try to model it. One way
+is maxmin expected utility of Gilboa and Schmeidler (1989), where people do not
+have a single coherent belief but a \emph{set} of beliefs. E.g., in the Ellsberg
+example, you can think that the probability that the ball is Black is in a range
+from . Assume the worst (pessimistic).
+
+Formally:
+\[V(f) = \min_{p \in C} [E_p(u(f))]\]
+
+...horse-roulette.
+
+\(f = (s_1, l_1; s_2, l_2)\) where $l_i$ is a lottery over monetary prizes.
+
+Properties:
+\begin{enumerate}
+\item Rational (complete and transitive)
+\item Independence:
+  \[\forall f,g,h \text{ and } \alpha \in (0,1), f \succeq g \iff\]
+  \[\alpha f + (1-\alpha)h \succeq \alpha g + (1-\alpha)h\]
+
+  This should read: if act $f$ is preferred to act $g$, then any mixture of $f$ with a
+  third act $h$ should be preferred to the same mixture of $g$ with $h$.
+  
+\item Non-Degeneracy, Continuity, Monotonicity
+\end{enumerate}
+
+\subsection{Karni}
+\label{subsec:karni}
+
+Awareness of unawareness...
+
+Acts, mappings from known states to known consequences: $A$
+
+Consequences we know are possible and can be clearly described: $C$
+
+Unknown consequence, catch-all for ``none-of-the-above'': $x$
+
+Extended consequences: $\hat{C} = C \cup \{x\}$
+
+Augmented conceivable states: $\hat{C}^A \coloneq \{s : A \rightarrow \hat{C}\}$
+
+Fully describable conceivable states: $C^A \coloneq \{s : A \rightarrow C\}$
+
+Set of conceivable acts: $F \coloneq \{f : \hat{C}^A \rightarrow C\}$
+
+Set of extended conceivable acts:
+\[F^* \coloneq \{f^* : \hat{C}^A \rightarrow \hat{C} \mid
+  f^{*-1}(x) \subseteq \hat{C}^A \setminus C^A \}\]
+
+We consider lotteries over extended conceivable acts. Denote by $\Delta (F^*)$ the
+set of all probability distributions on $F^*$, and by $\Delta (F)$ its subset of all
+probability distributions on $F$. A generic element \(\mu \in \Delta (F^*)\) selects
+an extended conceivable act in $F^*$ according to the distribution $\mu$.
+
+Refer to elements of \(\Delta (F^*)\) by the name \emph{mixed extended conceivable acts}.
+The set \(\Delta (F^*)\) of all such lotteries is the choice set.
+
+
+\end{document}

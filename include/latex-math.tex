@@ -1,0 +1,33 @@
+% ========================
+%      MATH-Y STUFF
+% ========================
+
+\usepackage{mathtools} % loads asmmath
+\usepackage{amssymb} % more symbols.. 
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)} % better modulo
+\newcommand\Item[1][]{% equation alignment on enumeration
+  \ifx\relax#1\relax  \item \else \item[#1] \fi
+  \abovedisplayskip=0pt\abovedisplayshortskip=0pt~\vspace*{-\baselineskip}}
+
+% OPTIONAL 
+% \usepackage{nicefrac,xfrac} % prettify small fractions
+% \usepackage{esint} % more integral signs
+% \usepackage{ntheorem} % enhanced theorem env
+% \usepackage{numprint} % print big numbers....
+
+% pseudocode and code input
+% \usepackage[noend]{algpseudocode}
+% \usepackage{minted}
+% \renewcommand\algorithmicthen{}
+% \renewcommand\algorithmicdo{}
+% \MakeRobust{\Call}
+
+% physics package but better:
+% \DeclarePairedDelimiter{\bra}{\langle}{\rvert}%
+% \DeclarePairedDelimiter{\ket}{\lvert}{\rangle}%
+% \DeclarePairedDelimiterX\innerp[2]{\langle}{\rangle}{#1\delimsize\vert\mathopen{}#2}%
+% \DeclarePairedDelimiterX\braket[2]{\langle}{\rangle}{#1\delimsize\vert\mathopen{}#2}%
+% \DeclarePairedDelimiterX\braketOP[3]{\langle}{\rangle}{#1\,\delimsize\vert\,\mathopen{}#2\,\delimsize\vert\,\mathopen{}#3}%
+% \DeclarePairedDelimiterX\ketbra[2]{\lvert}{\rvert}{#1\delimsize\rangle\!\delimsize\langle#2}%
+% \DeclarePairedDelimiterX\outerp[2]{\lvert}{\rvert}{#1\delimsize\rangle\!\delimsize\langle#2}%
+% \DeclarePairedDelimiterX\projector[1]{\lvert}{\rvert}{#1\delimsize\rangle\!\delimsize\langle#1}%

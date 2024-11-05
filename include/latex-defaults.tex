@@ -1,0 +1,77 @@
+% ========================
+%    FONTS AND ENCODING
+% ========================
+
+\usepackage{fourier}
+\usepackage{opensans}
+\usepackage[T1]{fontenc}
+
+\usepackage[DIV=14,BCOR=2mm,headinclude=true,footinclude=false]{typearea}
+\makeatletter
+\if@twoside % commands below work only for twoside option of \documentclass
+    \newlength{\textblockoffset}
+    \setlength{\textblockoffset}{12mm}
+    \addtolength{\hoffset}{\textblockoffset}
+    \addtolength{\evensidemargin}{-2.0\textblockoffset}
+\fi
+\makeatother
+
+\usepackage{titlesec} % www.ctan.org/tex-archive/macros/latex/contrib/titlesec/titlesec.pdf
+\titleformat{name=\section}[hang]{
+  \usefont{T1}{opensans-TLF}{b}{n}\selectfont}
+  {} % label
+  {0em} % horizontal separation between label and title body
+  {\hspace{-0.4pt}\Large \thesection\hspace{0.6em}} % code preceding the title
+\titleformat{name=\section,numberless}[hang]{
+  \usefont{T1}{opensans-TLF}{b}{n}\selectfont}
+  {} % label
+  {0em} % horizontal separation between label and title body
+  {\hspace{-0.4pt}\Large } % code preceding the title
+\titleformat{\subsection}[hang]{
+  \usefont{T1}{opensans-TLF}{b}{n}\selectfont}
+  {} % label
+  {0em} % horizontal separation between label and title body
+  {\hspace{-0.4pt}\large \thesubsection\hspace{0.6em}} % code preceding the title
+\titleformat{name=\subsection,numberless}[hang]{
+  \usefont{T1}{opensans-TLF}{b}{n}\selectfont}
+  {} % label
+  {0em} % horizontal separation between label and title body
+  {\hspace{-0.4pt}\large } % code preceding the title
+\titleformat{\subsubsection}[hang]{
+  \usefont{T1}{opensans-TLF}{b}{n}\selectfont}
+  {} % label
+  {0em} % horizontal separation between label and title body
+  {\hspace{-0.4pt}\large \thesubsubsection\hspace{0.6em}} % code preceding the title
+
+\usepackage{tocloft}[subfigure] % subfigure option only if using subfigure package
+\renewcommand{\cfttoctitlefont} % ToC title
+             {\usefont{T1}{opensans-TLF}{b}{n}\selectfont\huge}
+% \renewcommand{\cftchapfont}% chapter titles
+%              {\usefont{T1}{opensans-TLF}{b}{n}\selectfont}
+\renewcommand{\cftsecfont} % section titles
+             {\usefont{T1}{opensans-TLF}{b}{n}\selectfont}
+\renewcommand{\cftsubsecfont} % subsection titles
+             {\usefont{T1}{futs}{b}{n}\selectfont}
+% \renewcommand{\cftchappagefont} % chapter page numbers
+%              {\usefont{T1}{futs}{b}{n}\selectfont}
+\renewcommand{\cftsecpagefont} % section page numbers
+             {\cftsecfont} 
+\renewcommand{\cftsubsecpagefont} % subsection page numbers
+             {\cftsubsecfont}
+  
+\usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,spacing=true]{microtype}
+\SetProtrusion{encoding={*},family={futs},series={*},size={6,7}}
+                {1={ ,750},2={ ,500},3={ ,500},4={ ,500},5={ ,500},
+                6={ ,500},7={ ,600},8={ ,500},9={ ,500},0={ ,500}}
+\SetExtraKerning[unit=space]
+    {encoding={*}, family={futs}, series={*}, size={footnotesize,small,normalsize}}
+    {\textendash={400,400}, % en-dash, add more space around it
+     "28={ ,150}, % left bracket, add space from right
+     "29={150, }, % right bracket, add space from left
+     \textquotedblleft={ ,150}, % left quotation mark, space from right
+     \textquotedblright={150, }} % right quotation mark, space from left
+\SetExtraKerning[unit=space]
+   {encoding={*}, family={opensans-TLF}, series={b}, size={large,Large}}
+   {1={-200,-200}, 
+    \textendash={400,400}}
+\SetTracking{encoding={*}, shape=sc}{25}
