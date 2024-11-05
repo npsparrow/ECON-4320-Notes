@@ -1,8 +1,8 @@
-\documentclass[letterpaper, 12pt]{article}
+\documentclass[letterpaper, 12pt, titlepage]{article}
 \usepackage{hyperref}
 \usepackage{graphicx}
 
-\title{Content}
+\title{ECON 4320 Comprehensive Notes}
 \author{Nikhil Panickssery}
 \date{\today}
 
@@ -15,8 +15,17 @@
 
 \maketitle
 
+\pagenumbering{roman}
+\tableofcontents
+
+\newpage
+\pagenumbering{arabic}
+
 \section{Introduction}
 \label{sec:introduction}
+
+\subsection{Course Overview}
+\label{subsec:overview}
 
 This course is designed to:
 
@@ -26,91 +35,214 @@ This course is designed to:
 \item develop skills in \emph{how} to model decision making.
 \end{enumerate}
 
-\section{Models}
-\label{sec:models}
+This will be done through lectures, problem sets, and presenting papers on
+topics in decision theory. Students will also research new models or develop
+economic questions and answer them.
 
-The following is the list of models we will analyze for the course:
+\subsection{Course Outline}
+\label{sec:outline}
 
 \begin{enumerate}
-\item k
+\item Introductions to decision science
+  \begin{enumerate}
+  \item What is ``decision theory''?
+  \item Should we study what people do or study what they \emph{should} do?
+  \end{enumerate}
+  
+\item Standard choice
+  \begin{enumerate}
+  \item Model primitives: preferences or choices?
+  \item What does ``rationality'' look like?
+  \end{enumerate}
+  
+\item Choice under uncertainty
+  \begin{enumerate}
+  \item How do/should we make choices when the state of the world is unknown?
+  \item Philosophical approaches to uncertainty (ignorance)
+  \item Subjective expected utility and ambiguity aversion
+  \item Case-based decision theory
+  \end{enumerate}
+  
+\item Choice under risk
+  \begin{enumerate}
+  \item How do/should we make choices when there is risk, but we know objective
+    probabilities?
+  \item Choice axioms: normative or descriptive?
+  \item Rank dependent utility, cumulative prospect theory, salience
+  \end{enumerate}
+
+\item Limited Attention
+  \begin{enumerate}
+  \item Humans have limited information processing capacity
+  \item How does this affect choice?
+  \item What does ``rationality'' look like if we allow for people to not pay
+    full attention?
+  \item Sparse maximization, salience, limited consideration, rational inattention
+  \end{enumerate}
+
+\item Heuristics
+  \begin{enumerate}
+  \item In (nearly) all of the above, we typically assume a certain level of
+    ``rationality''
+  \item What happens if people use decision shortcuts, or heuristics?
+  \end{enumerate}
 \end{enumerate}
 
-\section{Uncertainty}
+
+\subsection{On Models}
+\label{subsec:models}
+
+Decision theorists and economists are interested in both how people make
+decisions and how they \emph{should} make decisions (if they were ideally
+rational). This is typically done by producing models. But what \emph{is}
+a model?
+
+A model is a theoretical representation of reality; they come in many
+forms, often mathematical. Decision-making models are the primary interest
+of decision theorists. They often satisfy the following properties:
+\begin{itemize}
+\item \textbf{Simplified:} certain aspects that exist in real life are
+  excluded from the model.
+\item \textbf{Tractable:} it can be solved using relatively simple methods.
+\item \textbf{As-if:} decision makers can be modeled ``as if'' they behave
+  according to the model.
+\end{itemize}
+
+A good method for building a model might begin by constructing a highly
+simplified example. This can help to develop the foundational understanding
+necessary to work out a toy model.
+
+Once you have a good starting point, work to generalize the model. Consider the
+simplifications you made to produce the example, and start to revert them.  The
+goal of generalizing the model is to increase its flexibility; the level of
+``flexibility'' may depend on the particular problem of interest.
+
+Once understood, consult the literature on the problem. How have other people
+chosen to construct their models? How are they similar and different from yours,
+and why?
+
+\section{Standard choice}
+\label{sec:standard-choice}
+
+
+\subsection{Resnick (1987), ch. 1}
+\label{subsec:resnick}
+
+It's important to note that Resnick approaches decision theory from his
+background as a philosopher rather than an economist. This perspective
+influences both his terminology and objectives. In the preface, he
+contextualizes decision theory as a broad field that encompasses utility theory,
+game theory, and social choice theory. His stated aim is to ``put forward an
+exposition of the theory that pays particular attention to matters of logical
+and philosophical interest,'' reflecting his focus on theoretical foundations and
+their associated philosophical impact rather than economic applications.
+
+Chapter one then opens by defining decision theory. It is usual to divide
+decision theory into two main branches: descriptive decision theory, which seeks
+to find out how decisions \emph{are} made; and normative (or prescriptive)
+decision theory, which seeks to prescribe how decisions \emph{ought} to be
+made. The latter study ideally rational agents. That is not to say these
+branches are completely separated, however\textemdash for instance, when
+studying chess players' strategies to develop guidelines for novice players. 
+
+\subsection{Model primitives}
+\label{subsec:primitives}
+
+Preferences vs. Choices.
+
+First, properties of preferences.
+
+Utility? not always the primitive. Often, it is a preference relation.  But
+under certain assumptions, you can represent a preference using a utility
+function.
+
+\subsection{Preferences}
+\label{subsec:preferences}
+
+\subsubsection{Utility representations}
+\label{subsubsec:utility-representations}
+
+\subsubsection{From Mas-Colell, Whinston, and Green}
+\label{subsubsec:preference-utility}
+
+\subsection{Choices}
+\label{subsec:choices}
+
+\subsection{WARP}
+\label{subsec:warp}
+
+\subsection{Preferences and WARP, connected}
+\label{subsec:preferences-and-warp}
+
+\subsection{Classical demand theory}
+\label{subsec:classical-demand-theory}
+
+\section{Decision making under uncertainty}
 \label{sec:uncertainty}
 
 Most decisions we face on a day-to-day basis involve some degree of
-uncertainty. Whether that comes in which stock to invest in, what movie to
-watch, or what job to accept, the actual probability of each outcome is not
+uncertainty. Whether that comes in deciding which stock to invest in, what movie
+to watch, or what job to accept, the actual probability of each outcome is not
 known. Consider: when we discuss risk, everyone agrees on the probabilities;
 when discussing uncertainty, there is disagreement. That is, when analyzing
 someone's actions, we cannot make any statements \emph{a priori} regarding their
 beliefs.
 
-\subsection{Resnick}
-\label{subsec:resnick}
+\subsection{Back to Resnick}
+\label{subsec:resnick-uncertainty}
 
-\subsection{Savage and SEU}
-\label{subsec:savage}
+\subsection{Subjective expected utility\textemdash Savage (1954)}
+\label{subsec:savage-seu}
 
-\subsection{Ellsberg}
-\label{subsec:ellsberg}
+Karni (2005)
 
-SEU cannot account for ambiguity aversion... so we will try to model it. One way
-is maxmin expected utility of Gilboa and Schmeidler (1989), where people do not
-have a single coherent belief but a \emph{set} of beliefs. E.g., in the Ellsberg
-example, you can think that the probability that the ball is Black is in a range
-from . Assume the worst (pessimistic).
+\subsubsection{SEU properties}
+\label{subsubsec:seu-properties}
 
-Formally:
-\[V(f) = \min_{p \in C} [E_p(u(f))]\]
+\subsubsection{SEU, formally}
+\label{subsubsec:seu-proper}
 
-...horse-roulette.
+\subsection{Ellsberg paradox}
+\label{subsec:ellsberg-paradox}
 
-\(f = (s_1, l_1; s_2, l_2)\) where $l_i$ is a lottery over monetary prizes.
+\subsection{Maxmin expected utility\textemdash Gilboa and Schmeidler}
+\label{subsec:gs-maxmin}
 
-Properties:
-\begin{enumerate}
-\item Rational (complete and transitive)
-\item Independence:
-  \[\forall f,g,h \text{ and } \alpha \in (0,1), f \succeq g \iff\]
-  \[\alpha f + (1-\alpha)h \succeq \alpha g + (1-\alpha)h\]
+\subsection{Awareness of unawareness\textemdash Karni and Vier\o \,(2017)}
+\label{subsec:kv-awareness}
 
-  This should read: if act $f$ is preferred to act $g$, then any mixture of $f$ with a
-  third act $h$ should be preferred to the same mixture of $g$ with $h$.
-  
-\item Non-Degeneracy, Continuity, Monotonicity
-\end{enumerate}
+\subsection{Case-based decision theory\textemdash Gilboa and Schmeidler (1995)}
+\label{subsec:gs-cbdt}
 
-\subsection{Karni}
-\label{subsec:karni}
+\section{Decision making under risk}
+\label{sec:risk}
 
-Awareness of unawareness...
+\subsection{Expected utility}
+\label{subsec:expected-utility}
 
-Acts, mappings from known states to known consequences: $A$
+\subsection{Preferences for risk}
+\label{subsec:risk-pref}
 
-Consequences we know are possible and can be clearly described: $C$
+\subsection{Kahneman and Tversky (1979)}
+\label{subsec:kt}
 
-Unknown consequence, catch-all for ``none-of-the-above'': $x$
+\subsection{Rank dependent utility\textemdash Quiggin (1982, 1993)}
+\label{subsec:quiggin-rdu}
 
-Extended consequences: $\hat{C} = C \cup \{x\}$
+\subsection{Cumulative prospect theory}
+\label{subsec:cpt}
 
-Augmented conceivable states: $\hat{C}^A \coloneq \{s : A \rightarrow \hat{C}\}$
+\subsection{CPT axioms\textemdash Chateauneuf and Wakker (1999)}
+\label{subsec:cpt-axioms}
 
-Fully describable conceivable states: $C^A \coloneq \{s : A \rightarrow C\}$
+\subsection{Disappointment aversion\textemdash Gul (1991)}
+\label{subsec:gul-dis-aversion}
 
-Set of conceivable acts: $F \coloneq \{f : \hat{C}^A \rightarrow C\}$
+\section{Limited attention}
+\label{sec:limited-attention}
 
-Set of extended conceivable acts:
-\[F^* \coloneq \{f^* : \hat{C}^A \rightarrow \hat{C} \mid
-  f^{*-1}(x) \subseteq \hat{C}^A \setminus C^A \}\]
-
-We consider lotteries over extended conceivable acts. Denote by $\Delta (F^*)$ the
-set of all probability distributions on $F^*$, and by $\Delta (F)$ its subset of all
-probability distributions on $F$. A generic element \(\mu \in \Delta (F^*)\) selects
-an extended conceivable act in $F^*$ according to the distribution $\mu$.
-
-Refer to elements of \(\Delta (F^*)\) by the name \emph{mixed extended conceivable acts}.
-The set \(\Delta (F^*)\) of all such lotteries is the choice set.
+\subsection{Sparse maximization\textemdash Gabaix (2014)}
+\label{subsec:label}
 
 
 \end{document}
